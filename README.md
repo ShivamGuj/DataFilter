@@ -1,14 +1,15 @@
 After downloading the file,
 
-For frontend:
+For frontend(Mobilicis):
 
 1) npm install
-2) npm install bootstrap
+2) npm start
 
-For backend:
+For backend(backend):
 
 1) npm init
 2) npm install express cors mongoose dotenv
+3) npm rundev
 
 Backend host : 8080
 
