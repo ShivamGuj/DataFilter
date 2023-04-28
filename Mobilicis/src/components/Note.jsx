@@ -7,7 +7,7 @@ function Note() {
   const [showAvgIncome, setShowAvgIncome] = useState(false);
 
   useEffect(()=>{
-    fetch('http://localhost:8080/user')
+    fetch('http://localhost:10000/user')
     .then(response => response.json())
     .then(data => setRecords(data))
     .catch(err => console.log(err))
