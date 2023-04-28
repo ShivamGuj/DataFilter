@@ -4,11 +4,13 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const ProductJson = require("./sample_data.json");
 const path = require('path');
+const http = require('http');
 
 const app = express()
 app.use(cors())
 
 const PORT = process.env.PORT || 8080
+const server = http.createServer(app);
 
 app.get("/",(req,res)=>{
     res.send("Server is running")
@@ -85,5 +87,5 @@ app.get("/user",async(req,res) => {
 })
 
 
-app.listen(PORT,()=>console.log("server is running at port : " + PORT))
+server.listen(PORT,()=>console.log("server is running at port : " + PORT))
 
