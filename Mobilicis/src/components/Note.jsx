@@ -7,7 +7,7 @@ function Note() {
   const [showAvgIncome, setShowAvgIncome] = useState(false);
 
   useEffect(()=>{
-    fetch('http://localhost:10000/user')
+    fetch('https://datafilter2.onrender.com/user')
     .then(response => response.json())
     .then(data => setRecords(data))
     .catch(err => console.log(err))
